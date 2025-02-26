@@ -1,0 +1,164 @@
+/* Center the form container */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height */
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px;
+}
+
+/* Form wrapper */
+.form-wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Header section */
+.header h2 {
+  text-align: center;
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Input fields */
+input,
+select,
+.fixed-size-textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.fixed-size-textarea {
+  height: 80px; /* Fixed height for participant names */
+  resize: none;
+  overflow-y: auto;
+}
+
+/* Hover and focus effects */
+input:focus,
+select:focus,
+.fixed-size-textarea:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6f7ff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+}
+
+.success-message h3 {
+  color: #007bff;
+}
+
+/* Remove extra spacing when success message is shown */
+.submitted .header {
+  display: none;
+}
+
+/* Footer text */
+.form-footer {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+}
+.sexess{
+  text-align: center;
+  color:#333;
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+}
+
+.mia{
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* 🔹 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .form-section h3 {
+    font-size: 16px;
+  }
+
+  input,
+  select,
+  .fixed-size-textarea {
+    font-size: 14px;
+    height: 38px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
