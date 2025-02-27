@@ -24,12 +24,12 @@ body {
 /* Full-Width Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 5%;
   width: 100vw;
+  padding: 1rem 0; 
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -41,27 +41,37 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
 }
 
 /* Logo */
 .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: #1a365d;
   letter-spacing: 1px;
   transition: color 0.3s ease;
+  font-family: 'Oswald';
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0; /* Prevents logo from shrinking */
 }
 
 /* Navigation Menu (Desktop) */
 .nav-menu {
   display: flex;
   gap: 2rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: auto;
+  font-weight:200;
 }
 
 .nav-item {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 200;
   color: #4a5568;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -74,12 +84,11 @@ body {
 
 .register-btn {
   color: #ffffff;
-  
 }
 
 .register-btn:hover {
- color:#3182ce;
- text-decoration: double;
+  color: #3182ce;
+  text-decoration: double;
 }
 
 /* 🔹 Hamburger Menu (Mobile) */
@@ -87,6 +96,9 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
   gap: 5px;
   z-index: 101;
 }
@@ -113,9 +125,23 @@ body {
 
 /* 🔹 Mobile Responsive */
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem; /* Adjust container padding */
+  }
+
   /* Show Hamburger */
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 5%;
+  }
+
+  /* Keep Logo Inside Navbar */
+  .navbar-logo {
+    position: relative;
+    left: 0; /* Aligns it perfectly */
+    text-align: left;
+    padding:0;
   }
 
   /* Hide Menu by Default */
@@ -125,12 +151,12 @@ body {
     align-items: flex-start;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0;
     right: 0;
     background: white;
     padding: 1rem 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     transform: translateY(-150%);
     transition: transform 0.3s ease-in-out;
     gap: 0;
@@ -149,15 +175,22 @@ body {
   }
 
   .register-btn {
-    margin: 15px 5%;
-    display: inline-block;
+    text-align: left;
+    margin: 0;
+    display: flex;
     text-align: center;
+    border-bottom: 1px solid #f0f0f0;
   }
 }
 
 /* Desktop Menu */
 @media (min-width: 769px) {
   .nav-menu.desktop {
-    display: flex;
+    display: flex !important;
+    gap: 2rem;
+  }
+  
+  .hamburger {
+    display: none; /* Hide hamburger on desktop */
   }
 }

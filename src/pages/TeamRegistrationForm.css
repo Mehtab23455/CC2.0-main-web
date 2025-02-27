@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+
+
 /* Center the form container */
 .registration-container {
   display: flex;
@@ -6,6 +9,9 @@
   min-height: 100vh; /* Full height */
   background-color: #f4f4f4; /* Light gray background */
   padding: 20px;
+  width: 100%;
+  font-family: 'Share Tech Mono';
+  
 }
 
 /* Form wrapper */
@@ -16,6 +22,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
+
 }
 
 /* Header section */
@@ -23,12 +30,16 @@
   text-align: center;
   color: #007bff;
   font-size: 24px;
-  margin-bottom: 15px;
+  font-family: 'Share Tech Mono';
+  margin-bottom: 2rem;
+  padding-bottom:2rem;
+  
 }
 
 /* Form Sections */
 .form-section {
   margin-bottom: 20px;
+  
 }
 
 .form-section h3 {
@@ -37,6 +48,7 @@
   margin-bottom: 10px;
   border-bottom: 2px solid #007bff;
   padding-bottom: 5px;
+  font-family: 'Share Tech Mono';
 }
 
 /* Input fields */
@@ -50,8 +62,11 @@ select,
   border-radius: 5px;
   font-size: 16px;
   background-color: #f9f9f9;
+ font-family: 'Share Tech Mono';;
   color: #333;
+  font-weight: 400;
   transition: all 0.3s ease-in-out;
+  font-family: 'Share Tech Mono';
 }
 
 .fixed-size-textarea {
@@ -71,11 +86,16 @@ select:focus,
 
 /* Labels */
 label {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0.25rem;
   color: #444;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
+  font-family: 'Share Tech Mono';
+
 }
 
 /* Buttons */
@@ -83,12 +103,23 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   transition: 0.3s;
+  font-family: 'Oswald';
+}
+
+.sexesss{
+  font-size:2rem;
+  font-family: 'Oswald','Futura';
+  color:#333;
+  padding-top:1rem;
+  padding-bottom:1rem;
 }
 
 button:hover {
@@ -124,14 +155,18 @@ button:hover {
   text-align: center;
   color:#333;
   padding-top: 0.25rem;
-  padding-bottom: 1rem;
-  font-family: 'Futura', sans-serif;
+  padding-top:0.5rem;
+  padding-bottom: 2.5rem;
+  font-family:'Oswald','Futura', sans-serif;
   font-weight: bold;
+  font-size: 2rem;
+
 }
 
 .mia{
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
+  font-size: 0.75rem;
 }
 
 /* 🔹 Mobile Responsiveness */
@@ -141,20 +176,27 @@ button:hover {
     max-width: 100%;
   }
 
+  label{
+    font-size: 1rem;
+    padding-bottom:1rem;
+    padding-top:1rem;
+  }
+
   .header h2 {
     font-size: 20px;
   }
 
   .form-section h3 {
-    font-size: 16px;
+    font-size: 2rem;
   }
-
+  
   input,
   select,
   .fixed-size-textarea {
-    font-size: 14px;
-    height: 38px;
-    padding: 8px;
+    font-size: small;
+    height: 2rem;
+    width:27rem;
+    padding: 1rem;
   }
 
   button {

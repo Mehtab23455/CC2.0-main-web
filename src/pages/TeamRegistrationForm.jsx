@@ -42,8 +42,8 @@ const TeamRegistrationForm = () => {
         {submitted ? (
           <div className="success-message">
             <h3>Registration Successful!</h3>
-            <p className='sexess'>Your team has been registered. We will contact you soon.</p>
-            <button onClick={() => setSubmitted(false)}>Register Another Team</button>
+            <p className='sexesss'>Your team has been registered. We will contact you soon.</p>
+            <button onClick={() => setSubmitted(false)}>REGISTER ANOTHER TEAM</button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="registration-form">
@@ -144,7 +144,7 @@ const TeamRegistrationForm = () => {
 
             <div className="form-footer">
               <p className='mia'>* Required fields. Teams must have total members between 2-4 members.</p>
-              <button type="submit">Submit Registration</button>
+              <button type="submit">SUBMIT</button>
             </div>
           </form>
         )}

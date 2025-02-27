@@ -10,7 +10,7 @@ function LandingPage() {
         <div className="hero-subtitle">
           <span>Is </span>
           <Link to="/here" className="here-link" aria-label="Go to the here page">
-            Here!
+           Here!
           </Link>
         </div>
       </div>

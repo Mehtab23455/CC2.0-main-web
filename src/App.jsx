@@ -3,10 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import EventsPage from './pages/EventsPage';
-import TeamRegistrationForm from './pages/TeamRegistrationForm'; // Import Registration Form
+import TeamRegistrationForm from './pages/TeamRegistrationForm';
+import Rules from './pages/Rules';
+import Landing from './pages/Here';
+
+
 import Footer from './components/Footer';
 import './App.css';
-import HackathonInfoPage from './pages/Here';
+import OrganizerSection from './pages/Organizer';
+
 
 function App() {
   return (
@@ -18,7 +23,13 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/register" element={<TeamRegistrationForm />} /> {/* Add this route */}
-            <Route path="/here" element={<HackathonInfoPage />} />
+            <Route path="/rules" element={<Rules/>} /> {/* Add this route */}
+            <Route path="/here" element={<Landing/>} /> {/* Add this route */}
+            <Route path="/organizers" element={<OrganizerSection/>} /> {/* Add this route */}
+
+
+            
+            
             
           </Routes>
         </div>
