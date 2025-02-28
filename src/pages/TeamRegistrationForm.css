@@ -1,206 +1,350 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 
-
-/* Center the form container */
+/* Registration Form Container - Scoped with more specific selectors */
 .registration-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Full height */
-  background-color: #f4f4f4; /* Light gray background */
+  min-height: 100vh;
+  background-color: #f4f4f4;
   padding: 20px;
   width: 100%;
-  font-family: 'Share Tech Mono';
-  
+  font-family: 'Share Tech Mono', monospace;
 }
 
 /* Form wrapper */
-.form-wrapper {
+.registration-container .form-wrapper {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
   width: 100%;
   max-width: 600px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #007bff;
+}
 
+.registration-container .form-wrapper:hover {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Header section */
-.header h2 {
+.registration-container .header {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.registration-container .header h2 {
   text-align: center;
   color: #007bff;
-  font-size: 24px;
-  font-family: 'Share Tech Mono';
+  font-size: 26px;
+  font-family: 'Share Tech Mono', monospace;
   margin-bottom: 2rem;
-  padding-bottom:2rem;
-  
+  padding-bottom: 1.5rem;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.registration-container .header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
 }
 
 /* Form Sections */
-.form-section {
-  margin-bottom: 20px;
-  
+.registration-container .form-section {
+  margin-bottom: 25px;
+  padding-bottom: 5px;
+  position: relative;
 }
 
-.form-section h3 {
+.registration-container .form-section h3 {
   font-size: 18px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
-  font-family: 'Share Tech Mono';
+  padding-bottom: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  display: inline-block;
+  position: relative;
 }
 
-/* Input fields */
-input,
-select,
-.fixed-size-textarea {
+.registration-container .form-section h3::after {
+  content: ">";
+  position: absolute;
+  right: -15px;
+  color: #007bff;
+}
+
+/* Input fields - Scoped to registration container */
+.registration-container input, 
+.registration-container select, 
+.registration-container .fixed-size-textarea {
   width: 100%;
-  height: 40px;
-  padding: 10px;
+  height: 42px;
+  padding: 10px 12px;
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
   background-color: #f9f9f9;
- font-family: 'Share Tech Mono';;
   color: #333;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
-  font-family: 'Share Tech Mono';
+  font-family: 'Share Tech Mono', monospace;
+  margin-bottom: 12px;
 }
 
-.fixed-size-textarea {
-  height: 80px; /* Fixed height for participant names */
+.registration-container .fixed-size-textarea {
+  height: 85px;
   resize: none;
   overflow-y: auto;
+  line-height: 1.4;
 }
 
 /* Hover and focus effects */
-input:focus,
-select:focus,
-.fixed-size-textarea:focus {
+.registration-container input:hover, 
+.registration-container select:hover, 
+.registration-container .fixed-size-textarea:hover {
+  border-color: #b3d7ff;
+}
+
+.registration-container input:focus, 
+.registration-container select:focus, 
+.registration-container .fixed-size-textarea:focus {
   border-color: #007bff;
   background-color: #fff;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 }
 
-/* Labels */
-label {
+/* Labels - Scoped */
+.registration-container label {
   font-size: 1.25rem;
   font-weight: 400;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
   margin-top: 0.25rem;
   color: #444;
   display: block;
   margin-bottom: 0.25rem;
-  font-family: 'Share Tech Mono';
-
+  font-family: 'Share Tech Mono', monospace;
+  position: relative;
 }
 
-/* Buttons */
-button {
+.registration-container label::before {
+  content: "_";
+  color: #007bff;
+  margin-right: 5px;
+}
+
+/* Buttons - Scoped to registration form */
+.registration-container button {
   background-color: #007bff;
   color: white;
   border: none;
   font-weight: 500;
-  letter-spacing: 1px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  letter-spacing: 1.5px;
+  padding: 12px 18px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   width: 50%;
-  transition: 0.3s;
-  font-family: 'Oswald';
+  transition: all 0.3s ease-in-out;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  display: block;
+  margin: 25px auto 10px;
+  position: relative;
+  overflow: hidden;
 }
 
-.sexesss{
-  font-size:2rem;
-  font-family: 'Oswald','Futura';
-  color:#333;
-  padding-top:1rem;
-  padding-bottom:1rem;
+.registration-container button::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  top: 0;
+  transition: all 0.6s ease;
 }
 
-button:hover {
+.registration-container button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.registration-container button:hover::before {
+  left: 100%;
+}
+
+.registration-container button:active {
+  transform: translateY(1px);
+}
+
+/* Section heading styles - Scoped */
+.registration-container .sexesss {
+  font-size: 2.2rem;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  color: #333;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.registration-container .sexess {
+  text-align: center;
+  color: #333;
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.registration-container .sexess::after {
+  content: "";
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+/* Minor text styles */
+.registration-container .mia {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
 }
 
 /* Success Message */
-.success-message {
+.registration-container .success-message {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #e6f7ff;
   border: 2px solid #007bff;
   border-radius: 8px;
+  animation: regFadeIn 0.5s ease-in-out;
 }
 
-.success-message h3 {
+@keyframes regFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.registration-container .success-message h3 {
   color: #007bff;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 15px;
 }
 
 /* Remove extra spacing when success message is shown */
-.submitted .header {
+.registration-container .submitted .header {
   display: none;
 }
 
 /* Footer text */
-.form-footer {
-  font-size: 12px;
+.registration-container .form-footer {
+  font-size: 0.8rem;
   color: #666;
   text-align: center;
-  margin-top: 10px;
-}
-.sexess{
-  text-align: center;
-  color:#333;
-  padding-top: 0.25rem;
-  padding-top:0.5rem;
-  padding-bottom: 2.5rem;
-  font-family:'Oswald','Futura', sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ccc;
 }
 
-.mia{
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-  font-size: 0.75rem;
+/* Field grouping */
+.registration-container .field-group {
+  margin-bottom: 15px;
+}
+
+/* Additional form element styles */
+.registration-container select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  padding-right: 30px;
 }
 
 /* 🔹 Mobile Responsiveness */
 @media (max-width: 768px) {
-  .form-wrapper {
-    padding: 20px;
+  .registration-container .form-wrapper {
+    padding: 25px 20px;
     max-width: 100%;
   }
 
-  label{
+  .registration-container label {
     font-size: 1rem;
-    padding-bottom:1rem;
-    padding-top:1rem;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
   }
 
-  .header h2 {
-    font-size: 20px;
+  .registration-container .header h2 {
+    font-size: 22px;
+    padding-bottom: 1.2rem;
   }
 
-  .form-section h3 {
-    font-size: 2rem;
-  }
-  
-  input,
-  select,
-  .fixed-size-textarea {
-    font-size: small;
-    height: 2rem;
-    width:27rem;
-    padding: 1rem;
+  .registration-container .form-section h3 {
+    font-size: 1.2rem;
   }
 
-  button {
+  .registration-container input,
+  .registration-container select,
+  .registration-container .fixed-size-textarea {
+    font-size: 0.9rem;
+    height: 38px;
+    width: 100%;
+    padding: 8px 10px;
+  }
+
+  .registration-container .fixed-size-textarea {
+    height: 75px;
+  }
+
+  .registration-container button {
     font-size: 14px;
-    padding: 8px;
+    padding: 10px 15px;
+    width: 75%;
+  }
+
+  .registration-container .sexesss, 
+  .registration-container .sexess {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-container .form-wrapper {
+    padding: 20px 15px;
+  }
+
+  .registration-container input,
+  .registration-container select,
+  .registration-container .fixed-size-textarea {
+    font-size: 0.85rem;
+  }
+
+  .registration-container button {
+    width: 90%;
   }
 }

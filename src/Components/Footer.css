@@ -48,5 +48,7 @@
   font-size: 1.0rem;
 }
 .footer-tagline{
-  font-family: 'Futura', sans-serif;
+  font-family: 'Oswald','Futura', sans-serif;
+  font-weight: 200;
+  font-size: 1.25rem;
 }

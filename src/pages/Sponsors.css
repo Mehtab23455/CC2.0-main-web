@@ -1,0 +1,160 @@
+/* Sponsors.css */
+.sponsors-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sponsors-heading {
+  font-size: 2rem;
+  color: #2b4162;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sponsors-underline {
+  height: 4px;
+  width: 80px;
+  background-color: #3b82f6;
+  margin: 0 auto 30px;
+}
+
+.sponsors-description {
+  text-align: center;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sponsor-tier {
+  margin-bottom: 50px;
+}
+
+.tier-title {
+  color: #2b4162;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.sponsor-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.platinum-tier .sponsor-logo-container {
+  width: 250px;
+  height: 150px;
+}
+
+.gold-tier .sponsor-logo-container {
+  width: 200px;
+  height: 120px;
+}
+
+.silver-tier .sponsor-logo-container {
+  width: 180px;
+  height: 100px;
+}
+
+.bronze-tier .sponsor-logo-container {
+  width: 150px;
+  height: 80px;
+}
+
+.sponsor-logo {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.become-sponsor {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #edf2f7;
+  border-radius: 8px;
+}
+
+.become-sponsor h3 {
+  font-size: 1.3rem;
+  color: #2b4162;
+  margin-bottom: 20px;
+}
+
+.sponsor-button {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sponsor-button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .platinum-tier .sponsor-logo-container {
+    width: 200px;
+    height: 120px;
+  }
+  
+  .gold-tier .sponsor-logo-container {
+    width: 180px;
+    height: 100px;
+  }
+  
+  .silver-tier .sponsor-logo-container,
+  .bronze-tier .sponsor-logo-container {
+    width: 150px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-logos {
+    gap: 15px;
+  }
+  
+  .platinum-tier .sponsor-logo-container,
+  .gold-tier .sponsor-logo-container,
+  .silver-tier .sponsor-logo-container,
+  .bronze-tier .sponsor-logo-container {
+    width: 140px;
+    height: 80px;
+    padding: 15px;
+  }
+}
