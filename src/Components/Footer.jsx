@@ -14,7 +14,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         {/* Email Link */}
-        <p className="footer-tagline">Empowering Innovation, One Line of Code at a Time.</p>
+        <p className="footer-tagline">EMPOWERING INNOVATION, ONE LINE OF CODE AT A TIME.</p>
 
 
         {/* Social Icons */}

@@ -1,9 +1,10 @@
 .footer {
-  background-color: #1a365d; /* Dark blue background */
+  background: linear-gradient(135deg, #172554 0%, #1e3a8a 100%);
   color: #ffffff; /* White text */
   text-align: center;
   padding: 10px 0;
   width: 100%;
+  letter-spacing: 1px;
   position: relative;
   bottom: 0;
   left: 0;
